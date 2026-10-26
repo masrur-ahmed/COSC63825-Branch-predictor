@@ -1,0 +1,24 @@
+row addr  outcome local global final  check
+  1 0x44  T       N     -      N      ok
+  2 0x90  T       N     -      N      ok
+  3 0x44  NT      T     -      T      ok
+  4 0x6C  NT      T     -      T      ok
+  5 0x90  T       N     -      N      ok
+  6 0x44  T       N     T      T      ok
+  7 0x90  T       T     -      T      ok
+  8 0x44  NT      T     -      T      ok
+  9 0x6C  NT      T     -      T      ok
+ 10 0x90  T       T     T      T      ok
+ 11 0x44  NT      N     T      T      ok
+ 12 0x6C  T       N     -      N      ok
+ 13 0x44  NT      N     -      N      ok
+ 14 0x6C  NT      T     N      N      ok
+ 15 0x90  T       T     -      T      ok
+ 16 0x44  T       N     T      T      ok
+ 17 0x90  T       T     -      T      ok
+ 18 0x44  NT      N     -      N      ok
+ 19 0x6C  NT      N     -      N      ok
+ 20 0x90  T       T     T      T      ok
+ 21 0x44  T       N     T      T      ok
+ 22 0x90  T       T     -      T      ok
+22/22 rows match the handout, 13/22 final predictions correct

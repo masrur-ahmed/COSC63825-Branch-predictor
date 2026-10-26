@@ -1,0 +1,6 @@
+src/predict
+src/predict_extra_credit
+src/*.dSYM/
+tests/example_test
+experiments/sweep
+.DS_Store
