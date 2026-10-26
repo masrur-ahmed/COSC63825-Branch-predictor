@@ -1,0 +1,19 @@
+# Sample input from the assignment handout.  The handout's program
+# (Add.d / Ld / Bne R2, R3, -3) never terminates because R2 != R3 forever, so
+# an Addi that counts R2 down to R3 (= 0) is added and the branch offset is
+# adjusted to jump back to the first instruction.
+               # of rs    Cycles in EX    Cycles in Mem    # of FUs
+Integer adder    2          1                                1
+FP adder         3          3                                1
+FP multiplier    2          20                               1
+Load/store unit  3          1               4                1
+
+ROB entries = 128
+Issue width = 2
+R1=10, R2=20, F2=30.1
+Mem[4]=1, Mem[8]=2, Mem[12]=3.4
+
+Add.d F1, F2, F3
+Ld F4, 8(R1)
+Addi R2, R2, -10
+Bne R2, R3, -4

@@ -1,0 +1,23 @@
+# Memory holds single-precision values and the run ends only when the last
+# store has finished writing memory.
+#  * 16777217 = 2^24 + 1 is exact in a double (FP register) but rounds to
+#    16777216 in single precision, both when stored to memory and when a load
+#    forwards it from a store.
+#  * The last instruction is a store, so its 5-cycle memory write ends four
+#    cycles after it commits; the total cycle count includes those cycles.
+               # of rs    Cycles in EX    Cycles in Mem    # of FUs
+Integer adder    2          1                                1
+FP adder         2          2                                1
+FP multiplier    2          4                                1
+Load/store unit  4          1               5                1
+
+ROB entries = 16
+R1=8, F1=16777217
+Mem[0]=3.4
+
+Add.d F5, F1, F0
+Sd F5, 0(R1)
+Ld F2, 0(R1)
+Ld F3, 0(R0)
+Add.d F4, F1, F1
+Sd F1, 4(R1)

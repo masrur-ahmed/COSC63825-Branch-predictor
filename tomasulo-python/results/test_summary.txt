@@ -1,0 +1,15 @@
+test (total cycles)               w=1    w=2    w=3    w=4
+branch_loop                        52     41     41     41
+forwarding_disambiguation          20     18     18     16
+handout_sample                     19     15     13     13
+hazards_r0                         22     18     18     18
+ilp_independent                    22     19     19     19
+loop_daxpy                         56     56     56     56
+sample_report_tc1                  36     35     35     35
+sample_report_tc2                  49     47     47     47
+single_precision_store_drain       20     19     19     19
+starter_test_case                  43     37     36     36
+structural_hazards                 33     30     30     30
+
+random programs: 1000 programs x 4 widths, 0 failures (7304 branch mispredictions recovered)
+ALL TESTS PASSED
